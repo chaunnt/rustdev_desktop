@@ -122,11 +122,11 @@ class _DesktopSettingPageState extends State<DesktopSettingPage>
       _Network(),
       _Display(),
       _Account(),
-      _About(),
+      // _About(),
     ];
-    if (bind.pluginFeatureIsEnabled()) {
-      children.insert(4, _Plugin());
-    }
+    // if (bind.pluginFeatureIsEnabled()) {
+    //   children.insert(4, _Plugin());
+    // }
     return children;
   }
 
@@ -1526,7 +1526,7 @@ class _AboutState extends State<_About> {
           child: SingleChildScrollView(
             controller: scrollController,
             physics: DraggableNeverScrollableScrollPhysics(),
-            child: _Card(title: '${translate('About')} RustDesk', children: [
+            child: _Card(title: '${translate('About')}', children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

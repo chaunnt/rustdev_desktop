@@ -77,8 +77,8 @@ class _DesktopHomePageState extends State<DesktopHomePage>
             child: Column(
               children: [
                 buildTip(context),
-                buildIDBoard(context),
-                buildPasswordBoard(context),
+                // buildIDBoard(context),
+                // buildPasswordBoard(context),
                 FutureBuilder<Widget>(
                   future: buildHelpCards(),
                   builder: (_, data) {

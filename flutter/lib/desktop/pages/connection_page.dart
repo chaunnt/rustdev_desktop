@@ -172,7 +172,7 @@ class _ConnectionPageState extends State<ConnectionPage>
               children: [
                 Expanded(
                   child: AutoSizeText(
-                    translate('Control Remote Desktop'),
+                    translate('Kết nối'),
                     maxLines: 1,
                     style: Theme.of(context)
                         .textTheme
@@ -223,15 +223,15 @@ class _ConnectionPageState extends State<ConnectionPage>
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Button(
-                    isOutline: true,
-                    onTap: () => onConnect(isFileTransfer: true),
-                    text: "Transfer File",
-                  ),
+                  // Button(
+                  //   isOutline: true,
+                  //   onTap: () => onConnect(isFileTransfer: true),
+                  //   text: "Transfer File",
+                  // ),
                   const SizedBox(
                     width: 17,
                   ),
-                  Button(onTap: onConnect, text: "Connect"),
+                  Button(onTap: onConnect, text: "Kết nối"),
                 ],
               ),
             )
