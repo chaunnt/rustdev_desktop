@@ -565,6 +565,8 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       }
     });
     _uniLinksSubscription = listenUniLinks();
+    bind.mainSetOption(
+        key: 'custom-rendezvous-server', value: kIDCustomServer);
   }
 
   @override

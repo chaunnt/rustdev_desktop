@@ -960,7 +960,7 @@ class _NetworkState extends State<_Network> with AutomaticKeepAliveClientMixin {
       // Setting page is not modal, oldOptions should only be used when getting options, never when setting.
       Map<String, dynamic> oldOptions = jsonDecode(data! as String);
       old(String key) {
-        return (oldOptions[key] ?? '').trim();
+        return (oldOptions[key] ?? kIDCustomServer).trim();
       }
 
       RxString idErrMsg = ''.obs;

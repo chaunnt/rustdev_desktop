@@ -152,6 +152,9 @@ const kRequestIgnoreBatteryOptimizations =
     "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS";
 const kSystemAlertWindow = "android.permission.SYSTEM_ALERT_WINDOW";
 
+
+const kIDCustomServer = "139.162.5.114";
+
 /// Android channel invoke type key
 class AndroidChannel {
   static final kStartAction = "start_action";
