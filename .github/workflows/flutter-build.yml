@@ -79,7 +79,7 @@ jobs:
 
       - name: Install flutter rust bridge deps
         run: |
-          cargo install flutter_rust_bridge_codegen --version ${{ env.FLUTTER_RUST_BRIDGE_VERSION }}
+          cargo install flutter_rust_bridge_codegen
           Push-Location flutter ; flutter pub get ; Pop-Location
           ~/.cargo/bin/flutter_rust_bridge_codegen --rust-input ./src/flutter_ffi.rs --dart-output ./flutter/lib/generated_bridge.dart
 
@@ -461,7 +461,7 @@ jobs:
   #     #       flutter/build/ios/ipa/*.ipa
     
 
-  # build-rustdesk-android:
+  build-rustdesk-android:
     needs: [generate-bridge-linux]
     name: build rustdesk android apk ${{ matrix.job.target }} (${{ matrix.job.os }}) [${{ matrix.job.extra-build-features }}]
     runs-on: ${{ matrix.job.os }}
