@@ -369,11 +369,11 @@ jobs:
   #         files: |
   #           rustdesk*-${{ matrix.job.arch }}.dmg
 
-  build-vcpkg-deps-linux:
-    uses: ./.github/workflows/vcpkg-deps-linux.yml
+  # build-vcpkg-deps-linux:
+  #   uses: ./.github/workflows/vcpkg-deps-linux.yml
 
-  generate-bridge-linux:
-    uses: ./.github/workflows/bridge.yml
+  # generate-bridge-linux:
+  #   uses: ./.github/workflows/bridge.yml
 
   # build-rustdesk-ios:
   #   needs: [generate-bridge-linux]
@@ -461,7 +461,7 @@ jobs:
   #     #       flutter/build/ios/ipa/*.ipa
     
 
-  build-rustdesk-android:
+  # build-rustdesk-android:
     needs: [generate-bridge-linux]
     name: build rustdesk android apk ${{ matrix.job.target }} (${{ matrix.job.os }}) [${{ matrix.job.extra-build-features }}]
     runs-on: ${{ matrix.job.os }}
